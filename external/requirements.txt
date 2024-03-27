@@ -1,0 +1,5 @@
+fastapi_poe
+fastapi
+toml
+asyncio
+uvicorn[standard]==0.22.0
