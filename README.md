@@ -70,7 +70,13 @@ Supported parameters:
 
 Other parameters will be ignored.
 
-The translation plugin in Bob has been successfully tested.
+**Successfully tested in the Chatbox.**
+
+## The bot name map to use from poe.
+"gpt-3.5-turbo-16k" = "ChatGPT-16k"
+"gpt-4" = "GPT-4"
+"gpt-4-vision-preview" = "GPT-4-128k"(Using this model, to use the chatbox custom model, fill in `gpt-4-vision-preview`)
+"gpt-4-turbo-preview" = "Claude-3-Opus"
 
 ## Credit
 
