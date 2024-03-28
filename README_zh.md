@@ -1,7 +1,7 @@
 # poe-gpt-api
 一个转换器，可以将 POE 提供的 API 令牌转换为 OpenAI 的 API 格式，从而使依赖于 OpenAI API 的其他应用程序可以使用 POE 的 API。
 
-这是一个工具，将 Poe（流亡之路）官方网站提供的 API 密钥转换为兼容的 OpenAI API 密钥。它使 Poe API 密钥可以与依赖于 OpenAI API 密钥的工具一起使用。开发此工具的主要原因是为中国大陆用户提供便利和稳定性，因为他们发现订阅和充值 OpenAI API 不太方便。
+这是一个工具，将 Poe官方网站提供的 API 密钥转换为兼容的 OpenAI API 密钥。它使 Poe API 密钥可以与依赖于 OpenAI API 密钥的工具一起使用。开发此工具的主要原因是为中国大陆用户提供便利和稳定性，因为他们发现订阅和充值 OpenAI API 不太方便。
 
 参考项目链接：[https://github.com/juzeon/poe-openai-proxy](https://github.com/ZERO-A-ONE/poe-gpt-api)
 
@@ -82,6 +82,4 @@ chmod +x poe-openai-proxy
 "gpt-4-turbo-preview" = "Claude-3-Opus"
 
 ## 鸣谢
-
-- https://github.com/juzeon/poe-openai-proxy
 - https://developer.poe.com/server-bots/accessing-other-bots-on-poe
