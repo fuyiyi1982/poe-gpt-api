@@ -5,6 +5,6 @@ WORKDIR /app
 COPY . .
 RUN pip install -r requirements.txt
 
-EXPOSE 5000
+EXPOSE 5100
 
 CMD [ "python", "api.py" ]
