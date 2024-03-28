@@ -84,8 +84,6 @@ Other parameters will be ignored.
 "gpt-4-turbo-preview" = "Claude-3-Opus"
 
 ## Credit
-
-- https://github.com/juzeon/poe-openai-proxy
 - https://developer.poe.com/server-bots/accessing-other-bots-on-poe
 
 
