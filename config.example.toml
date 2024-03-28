@@ -1,15 +1,15 @@
 # The port number for the proxy service. The proxied OpenAI API endpoint will be: http://localhost:3700/v1/chat/completions
 port = 3700
 
-# A list of poe tokens. You can get them from the cookies on poe.com, they look like this: p-b=fdasac5a1dfa6%3D%3D
+# If you are a poe subscriber, you can find your API key on the poe official website. You must be a poe subscriber.如果你是poe订阅者，你可以在poe官网找到API_key,你必须是poe订阅者。
 tokens = [""]
 
 # The proxy that will be used to connect to poe.com. Leave it blank if you do not use a proxy
 proxy = ""
 
 # The gateway url for the Python backend of poe-api.
-# Note that if you use docker this value should be changed into: http://external:5100
-gateway = "external:5100"
+# Note that if you use docker this value should be changed into: http://external:5100（docker启动请改成：http://external:5100）
+gateway = "http://localhost:5100"
 
 # The gateway port for the Python backend of poe-api.
 # Must be the same as the port indicated in the `gateway` above.
@@ -25,7 +25,7 @@ gateway-port = 5100
 # Hello! How can I assist you today?
 simulate-roles = 2
 
-# Rate limit. Default to 10 api calls per token in 1 minute
+# Rate limit. Default to 60 api calls per token in 1 minute
 rate-limit = 60
 
 # Cool down of seconds. One same token cannot be used more than once in n seconds
