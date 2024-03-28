@@ -7,6 +7,8 @@ Referenced the project at [https://github.com/juzeon/poe-openai-proxy](https://g
 
 Note that access to an API key is currently limited to Poe subscribers to minimize abuse.
 
+[中文文档](https://github.com/formzs/poe-gpt-api/blob/master/README_zh.md)
+
 ## Installation
 
 Clone this repository to your local machine:
