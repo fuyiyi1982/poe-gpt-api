@@ -3,7 +3,9 @@ A converter that can convert the API Token provided by POE into the API format o
 
 This is a tool that converts the API key provided by Poe (Path of Exile) official website into a compatible OpenAI API key. It enables Poe API key to be used with tools that depend on OpenAI API key. The main reason for developing this tool is to provide convenience and stability for users in mainland China who find it inconvenient to subscribe to and recharge OpenAI API. 
 
-Referenced the project at [https://github.com/juzeon/poe-openai-proxy](https://github.com/ZERO-A-ONE/poe-gpt-api)
+Referenced the project at [https://github.com/juzeon/poe-openai-proxy](https://github.com/juzeon/poe-openai-proxy)
+
+Modified from [https://github.com/ZERO-A-ONE/poe-gpt-api](https://github.com/ZERO-A-ONE/poe-gpt-api)
 
 Note that access to an API key is currently limited to Poe subscribers to minimize abuse.
 
@@ -84,6 +86,8 @@ Other parameters will be ignored.
 "gpt-4-turbo-preview" = "Claude-3-Opus"
 
 ## Credit
+- https://github.com/ZERO-A-ONE/poe-gpt-api
+- https://github.com/juzeon/poe-openai-proxy
 - https://developer.poe.com/server-bots/accessing-other-bots-on-poe
 
 
