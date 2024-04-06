@@ -9,7 +9,7 @@ import (
 type ConfigStruct struct {
 	Port          int               `toml:"port"`
 	Tokens        []string          `toml:"tokens"`
-	AccessTokens  []string          `toml:"access-tokens"`
+	AccessTokens  []string          `toml:"accessTokens"`
 	Gateway       string            `toml:"gateway"`
 	Bot           map[string]string `toml:"bot"`
 	SimulateRoles int               `toml:"simulate-roles"`
