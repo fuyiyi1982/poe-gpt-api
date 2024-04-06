@@ -8,6 +8,7 @@ import (
 	"io/ioutil"
 	"log"
 	"net/http"
+	"strings"
 	"time"
 
 	"github.com/gin-gonic/gin"
@@ -16,14 +17,36 @@ import (
 	"github.com/juzeon/poe-openai-proxy/util"
 )
 
+func contains(s []string, v string) bool {
+	for _, item := range s {
+		if item == v {
+			return true
+		}
+	}
+	return false
+}
+
+func AuthMiddleware() gin.HandlerFunc {
+	return func(c *gin.Context) {
+		authorization := c.GetHeader("Authorization")
+		token := strings.Replace(authorization, "Bearer ", "", 1)
+		if !contains(conf.Conf.AccessTokens, token) {
+			c.JSON(http.StatusUnauthorized, gin.H{"error": "Unauthorized"})
+			c.Abort()
+			return
+		}
+		c.Next()
+	}
+}
+
 func Setup(engine *gin.Engine) {
 	getModels := func(c *gin.Context) {
 		SetCORS(c)
 		c.JSON(http.StatusOK, conf.Models)
 	}
 
-	engine.GET("/models", getModels)
-	engine.GET("/v1/models", getModels)
+	engine.GET("/models", AuthMiddleware(), getModels)
+	engine.GET("/v1/models", AuthMiddleware(), getModels)
 
 	postCompletions := func(c *gin.Context) {
 		SetCORS(c)
@@ -64,8 +87,8 @@ func Setup(engine *gin.Engine) {
 		}
 	}
 
-	engine.POST("/chat/completions", postCompletions)
-	engine.POST("/v1/chat/completions", postCompletions)
+	engine.POST("/chat/completions", AuthMiddleware(), postCompletions)
+	engine.POST("/v1/chat/completions", AuthMiddleware(), postCompletions)
 
 	// OPTIONS /v1/chat/completions
 
@@ -74,8 +97,8 @@ func Setup(engine *gin.Engine) {
 		c.JSON(200, "")
 	}
 
-	engine.OPTIONS("/chat/completions", optionsCompletions)
-	engine.OPTIONS("/v1/chat/completions", optionsCompletions)
+	engine.OPTIONS("/chat/completions", AuthMiddleware(), optionsCompletions)
+	engine.OPTIONS("/v1/chat/completions", AuthMiddleware(), optionsCompletions)
 }
 
 func Stream(c *gin.Context, req poe.CompletionRequest, client *poe.Client) {
