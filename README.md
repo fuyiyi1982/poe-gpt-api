@@ -16,7 +16,7 @@ Note that access to an API key is currently limited to Poe subscribers to minimi
 Clone this repository to your local machine:
 
 ```
-git clone https://github.com/formzs/poe-gpt-api
+git clone https://github.com/formzs/poe-gpt-api.git
 cd poe-gpt-api/
 ```
 
