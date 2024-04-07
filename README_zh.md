@@ -14,7 +14,7 @@
 将此存储库克隆到本地机器：
 
 ```
-git clone https://github.com/formzs/poe-gpt-api
+git clone https://github.com/formzs/poe-gpt-api.git
 cd poe-gpt-api/
 ```
 
