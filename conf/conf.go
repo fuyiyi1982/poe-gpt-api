@@ -58,6 +58,7 @@ func Setup() {
 	if Conf.Bot == nil {
 		Conf.Bot = map[string]string{
 			"gpt-3.5-turbo-16k":    "ChatGPT-16k",
+			"gpt-3.5-turbo":	"ChatGPT-16k",
 			"gpt-4":                "GPT-4",
 			"gpt-4-vision-preview": "GPT-4-128k",
 			"gpt-4-turbo-preview":  "Claude-3-Opus",
