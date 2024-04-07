@@ -78,6 +78,8 @@ chmod +x poe-openai-proxy
 ## 从 poe 使用的机器人名称映射。
 "gpt-3.5-turbo-16k" = "ChatGPT-16k"
 
+"gpt-3.5-turbo" = "ChatGPT-16k"
+
 "gpt-4" = "GPT-4"
 
 "gpt-4-vision-preview" = "GPT-4-128k"（使用此模型，要使用 Chatbox 自定义模型，请填写 `gpt-4-vision-preview`）
