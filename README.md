@@ -75,7 +75,7 @@ Supported parameters:
 
 Other parameters will be ignored.
 
-**Successfully tested in the Chatbox.**
+**Successfully tested in the Chatbox and Lobe-chat.**
 
 ## The bot name map to use from poe.
 "gpt-3.5-turbo-16k" = "ChatGPT-16k"
