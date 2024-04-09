@@ -3,3 +3,4 @@ fastapi
 toml
 asyncio
 uvicorn[standard]==0.22.0
+python-multipart
